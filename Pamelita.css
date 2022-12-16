@@ -1,0 +1,80 @@
+body {
+
+  background-image: url('https://i.ibb.co/jHqmVgW/Pamelita-y-yo-merengues.jpg');
+  background-repeat: repeat-x; /* Repetir la imagen en el eje x */
+  background-position: center; /* Posicionar la imagen en el centro */
+  background-size: auto; /* Ajustar la imagen al tamaño del contenedor */
+}
+
+#cartel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+#cartel h1 {
+  color: #20005c; /* Color rosa claro */
+  font-size: 32px; /* Tamaño de la fuente */
+  font-weight: bold;
+}
+
+#opciones .opcion#si-verde {
+  background-color: #00FF00; /* Color verde */
+}
+
+#confeti {
+  /* Posición inicial de los trozos de confeti */
+  transform: translateY(-100%);
+
+  /* Estilos de los trozos de confeti */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F08080; /* Color rosa claro */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 5px;
+  display: none;
+}
+
+#confeti .trozo {
+  width: 50px;
+  height: 40px;
+  background-color: red;
+  border-radius: 7px;
+}
+
+
+#confeti .mostrar {
+  display: block;
+}
+
+.fondo-verde {
+  background-color: green;
+  width: 500px;
+  height: 70px;
+}
+
+.fondo-negro {
+  background-color: black;
+  width: 500px;
+  height: 70px;
+}
+
+.nosotros{
+  width: 450px;
+  height: 450px;
+  background-image: url('https://i.ibb.co/8jfghfC/Whats-App-Image-2022-12-16-at-2-20-49-AM.jpg');
+  background-repeat: repeat-x; /* Repetir la imagen en el eje x */
+  background-position: center; /* Posicionar la imagen en el centro */
+  background-size: contain; /* Ajustar la imagen al tamaño del contenedor */
+}
+
+#miCaja {
+  /* Estilos para el elemento con ID "miCaja" */
+  color: white;
+  font-size: 25px; /* Tamaño de la fuente */
+  font-weight: bold;
+  font-style: oblique;
+}
