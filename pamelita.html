@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="Pamelita.css">
+<body>
+<div id="cartel">
+  <h1>Feliz cumple mes, gracias por estar conmigo, te amo mucho mi Pamelita</h1>
+  <button id="pregunta">¿Te gustaría seguir siendo mi novia?</button>
+  <div id="opciones">
+    <button class="opcion" id="si">Sí</button>
+    <button class="opcion" id="si-verde">Sí, pero en verde</button>
+  </div>
+  <div id="confeti">
+    <div class="trozo"></div>
+  </div>
+  <div id="miCaja"></div>
+  <div id="imagen"></div>
+</div>
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+
+<script>
+// Obtener botones
+const si = document.getElementById('si');
+const siVerde = document.getElementById('si-verde');
+
+si.addEventListener('click', function() {
+  document.getElementById("miCaja").innerHTML = 'Felicidades, has renovado tu contrato por 14 meses más';
+  document.getElementById("miCaja").classList.add("fondo-negro");
+  document.getElementById("imagen").classList.add("nosotros");
+});
+
+siVerde.addEventListener('click', function() {
+  document.getElementById("miCaja").innerHTML = 'Felicidades, has renovado tu contrato por 14 meses más';
+  document.getElementById("miCaja").classList.add("fondo-verde");
+  document.getElementById("imagen").classList.add("nosotros");
+});
+// Función para mostrar mensaje y lanzar confeti
+function mostrarMensaje() {
+  // Mostrar mensaje de felicidades en caja de texto
+  document.getElementById("miCaja").innerHTML = 'Felicidades, has renovado tu contrato por 14 meses más';
+// Iniciar animación de confeti
+anime({
+targets: '#confeti .trozo', // Seleccionar trozos de confeti
+translateY: [
+{ value: 800, duration: 3000 }, // Mover hacia abajo
+{ value: 0, duration: 0 } // Regresar a su posición original
+],
+rotate: {
+value: 1080,
+duration: 1800,
+easing: 'easeInOutSine'
+},
+delay: anime.stagger(200) // Retrasar la animación de cada trozo en 100 milisegundos
+});
+}
+
+</script>
